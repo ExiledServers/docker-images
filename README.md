@@ -1,2 +1,2 @@
-# docker-images
-A collection of custom Docker images for Pterodactyl
+# debian-slim
+A Docker image based on debian-slim for Pterodactyl
