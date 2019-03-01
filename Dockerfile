@@ -9,9 +9,9 @@ RUN apt-get -q -y update \
 	&& apt-get -q -y clean \
 	&& useradd -m container \
 	&& mkdir -p /opt/steamcmd \
-	&& curl -s http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -xz -C /opt/steamcmd \
-	&& /opt/steamcmd/steamcmd.sh +login anonymous +quit \
-	&& chown -R root:root /opt/steamcmd
+	&& curl -fsSL http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -xz -C /opt/steamcmd \
+	&& chown -R root:root /opt/steamcmd \
+	&& /opt/steamcmd/steamcmd.sh +login anonymous +quit
 
 USER container
 
