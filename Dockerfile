@@ -11,6 +11,7 @@ RUN apt-get -q -y update \
 	&& mkdir -p /opt/steamcmd \
 	&& curl -fsSL http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -xz -C /opt/steamcmd \
 	&& chown -R root:root /opt/steamcmd \
+	&& chmod -R 777 /opt/steamcmd \
 	&& /opt/steamcmd/steamcmd.sh +login anonymous +quit
 
 USER container
