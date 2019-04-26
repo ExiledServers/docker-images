@@ -1,2 +1,2 @@
-# docker-images
-A collection of custom Docker images for Pterodactyl
+# nodejs
+A Docker image based on node:alpine for Pterodactyl
