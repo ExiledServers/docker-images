@@ -10,7 +10,8 @@ RUN apt-get update \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends winehq-stable \
 	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+	&& adduser -D -h /home/container container
 
 USER container
 
