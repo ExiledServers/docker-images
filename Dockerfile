@@ -8,7 +8,7 @@ RUN apt-get update \
 	&& dpkg --add-architecture i386 \
 	&& echo "deb https://dl.winehq.org/wine-builds/debian/ stable main" >> /etc/apt/sources.list \
 	&& apt-get update \
-	&& apt-get install -y --no-install-recommends winehq-stable xvfb \
+	&& apt-get install -y --no-install-recommends winehq-stable xauth xvfb \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& adduser -h /home/container container
