@@ -11,7 +11,7 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends winehq-stable xauth xvfb \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& adduser -h /home/container container
+	&& adduser --home /home/container container
 
 USER container
 
