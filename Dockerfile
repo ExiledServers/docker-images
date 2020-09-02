@@ -4,7 +4,7 @@ LABEL maintainer="phantom@exiledservers.net"
 
 RUN apt-get -q -y update \
 	&& apt-get -q -y dist-upgrade \
-	&& apt-get -q -y --no-install-recommends install lib32gcc1 lib32stdc++6 lib32tinfo5 ca-certificates curl tar  \
+	&& apt-get -q -y --no-install-recommends install lib32gcc1 lib32stdc++6 lib32ncurses6 ca-certificates curl tar \
 	&& apt-get -q -y autoremove \
 	&& apt-get -q -y clean \
 	&& useradd -m container \
